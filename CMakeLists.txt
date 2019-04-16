@@ -14,10 +14,12 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
 # Create code from a list of Qt designer ui files
 set(CMAKE_AUTOUIC ON)
+
+set(CMAKE_PREFIX_PATH $ENV{HOME}/Qt/5.12.2/gcc_64)
+
 find_package(Qt5 REQUIRED COMPONENTS Core Gui Widgets)
 
-
-
+######## Set executable file name, and add the source files for it.
 add_executable(QtDemoClion ${SOURCE_FILES})
 
 ######## link the depenceies
